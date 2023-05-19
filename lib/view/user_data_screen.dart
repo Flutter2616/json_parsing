@@ -41,27 +41,27 @@ class _UserscreenState extends State<Userscreen> {
                 child: ExpansionTile(
                   collapsedBackgroundColor: Colors.grey.shade100,expandedCrossAxisAlignment: CrossAxisAlignment.stretch,
                   backgroundColor: Colors.white,
-                  title: Text("${uf!.userlist[index]['name']}",
+                  title: Text("${uf!.userlist[index].name}",
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 18,
                           color: Colors.black)),
-                  leading: Text(" id : ${uf!.userlist[index]['id']}",
+                  leading: Text(" id : ${uf!.userlist[index].id}",
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 20,
                           color: Colors.black)),
                   children: [
-                    Text(" Phone : ${uf!.userlist[index]['phone']}",
+                    Text(" Phone : ${uf!.userlist[index].phone}",
                         style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 15,
                             color: Colors.black)),
-                    Text("Email :${uf!.userlist[index]['email']}",style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.w500)),
-                    Text("City :${uf!.userlist[index]['address']['city']}",style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.w500)),
-                    Text("Zip code :${uf!.userlist[index]['address']['zipcode']}",style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.w500)),
-                    Text("Web Site:${uf!.userlist[index]['website']}",style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.w500)),
-                    Text("Company:${uf!.userlist[index]['company']['name']}",style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.w500)),
+                    Text("Email :${uf!.userlist[index].email}",style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.w500)),
+                    Text("City :${uf!.userlist[index].addressmodel!.city}",style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.w500)),
+                    Text("Zip code :${uf!.userlist[index].addressmodel!.zipcode}",style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.w500)),
+                    Text("Web Site:${uf!.userlist[index].website}",style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.w500)),
+                    Text("Company:${uf!.userlist[index].companymodel!.name}",style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.w500)),
                   ],tilePadding: EdgeInsets.symmetric(horizontal: 8),
                 ),
               );

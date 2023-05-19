@@ -23,6 +23,10 @@ class _HomescreenState extends State<Homescreen> {
               ElevatedButton(onPressed: () {
                 Navigator.pushNamed(context, 'user');
               }, child: Text("user data")),
+              SizedBox(height: 10),
+              ElevatedButton(onPressed: () {
+                Navigator.pushNamed(context, 'cart');
+              }, child: Text("cart")),
             ],
           ),
         ),
