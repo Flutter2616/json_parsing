@@ -1,8 +1,10 @@
 import'package:flutter/material.dart';
 import 'package:json_parsing/provider/cart_provider.dart';
+import 'package:json_parsing/provider/employee_provider.dart';
 import 'package:json_parsing/provider/post_provider.dart';
 import 'package:json_parsing/provider/user_provider.dart';
 import 'package:json_parsing/view/cart_screen.dart';
+import 'package:json_parsing/view/employee_screen.dart';
 import 'package:json_parsing/view/home_screen.dart';
 import 'package:json_parsing/view/post_screen.dart';
 import 'package:json_parsing/view/user_data_screen.dart';
@@ -15,15 +17,17 @@ void main()
         ChangeNotifierProvider(create: (context) => Postprovider()),
         ChangeNotifierProvider(create: (context) => Userprovider()),
         ChangeNotifierProvider(create: (context) => Cartprovider()),
+        ChangeNotifierProvider(create: (context) => Employeeprovider()),
       ],
       child: MaterialApp(
-        initialRoute: 'cart',
+        initialRoute: 'employee',
         debugShowCheckedModeBanner: false,
         routes: {
           '/':(context) => Homescreen(),
           'post':(context) => Postscreen(),
           'user':(context) => Userscreen(),
           'cart':(context) => Cartscreen(),
+          'employee':(context) => Employeescreen(),
         },
       ),
     ),
