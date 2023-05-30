@@ -8,12 +8,12 @@ class Employeeprovider extends ChangeNotifier
 {
   Map employeelist= {};
   Employeemodel? employee;
-  // Employeemodel e=Employeemodel();
   Future<void> json_to_simple()
   async {
     String jsonstring=await rootBundle.loadString("assets/json/employee.json");
      employeelist=jsonDecode(jsonstring);
      employee=Employeemodel.fromjson(employeelist);
+     // print(employee!.employeedatalist!.length);
      notifyListeners();
   }
 }

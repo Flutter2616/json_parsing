@@ -2,7 +2,7 @@ class Cartmodel {
   String? date;
   int? id, userid, v;
   List<dynamic>? product;
-  List<Productmodel>? productmodel;
+  List<Productmodel1>? productmodel;
 
 
 
@@ -16,7 +16,7 @@ class Cartmodel {
 
   factory Cartmodel.fromjson(Map m) {
     List<dynamic> productlist=m['products'] ;
-    List<Productmodel> product = productlist.map((e) => Productmodel.fromjson(e)).toList();
+    List<Productmodel1> product = productlist.map((e) => Productmodel1.fromjson(e)).toList();
 
     return Cartmodel(
         id: m['id'],
@@ -27,12 +27,12 @@ class Cartmodel {
   }
 }
 
-class Productmodel {
+class Productmodel1 {
   int? productid, quntity;
 
-  Productmodel({this.productid, this.quntity});
+  Productmodel1({this.productid, this.quntity});
 
-  factory Productmodel.fromjson(Map m1) {
-    return Productmodel(productid: m1['productId'], quntity: m1['quantity']);
+  factory Productmodel1.fromjson(Map m1) {
+    return Productmodel1(productid: m1['productId'], quntity: m1['quantity']);
   }
 }

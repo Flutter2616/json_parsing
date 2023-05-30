@@ -30,7 +30,7 @@ class _EmployeescreenState extends State<Employeescreen> {
             elevation: 0,
             title: Text("Success Employee list",style: TextStyle(color: Colors.black,fontSize: 25,fontWeight: FontWeight.w500)),
             backgroundColor: Colors.white),
-        body: Padding(
+        body: et!.employee!=null ?Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,7 +71,7 @@ class _EmployeescreenState extends State<Employeescreen> {
                       fontSize: 25)),
             ],
           ),
-        ),
+        ):Container(color: Colors.grey.shade100),
       ),
     );
   }
